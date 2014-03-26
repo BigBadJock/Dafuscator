@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{56AE4ABC-248D-4BEA-ACB1-7DA3D3E5350B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4C25EBFF-6AC7-49D2-A5F8-DC76C6F0A3A1}"
@@ -14,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{88378213-6
 		Data\CompanyNameEndings.txt = Data\CompanyNameEndings.txt
 		Data\CompanyNameMiddles.txt = Data\CompanyNameMiddles.txt
 		Data\Country.txt = Data\Country.txt
+		EnglishTowns.txt = EnglishTowns.txt
 		Data\FirstNames.txt = Data\FirstNames.txt
 		Data\LastNames.txt = Data\LastNames.txt
 		Data\SecurityNames.txt = Data\SecurityNames.txt

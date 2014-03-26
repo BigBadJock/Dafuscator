@@ -57,7 +57,7 @@ namespace WaveTech.Dafuscator.Generators
 				generatedData = new List<string>();
 				foreach (var d in dates)
 				{
-					generatedData.Add(d.ToString());
+					generatedData.Add(string.Format("{0:yyyy/MM/dd HH:mm:ss}",d));
 				}
 			}
 
@@ -67,11 +67,12 @@ namespace WaveTech.Dafuscator.Generators
 
 	public class DateGenerator : IDateGenerator
 	{
+        Random rand = new Random(DateTime.Now.Millisecond);
+
 		public DateTime GenerateDate(DateTime minDate, DateTime maxDate)
 		{
 			// http://jberke.blogspot.com/2008/01/calculating-random-date-in-c.html
 
-			Random rand = new Random(DateTime.Now.Millisecond);
 			TimeSpan timeSpan = maxDate - minDate;
 			TimeSpan randomSpan = new TimeSpan((long)(timeSpan.Ticks * rand.NextDouble()));
 

@@ -33,6 +33,7 @@ namespace WaveTech.Dafuscator.Generators
 			For<ITokenReplacementGenerator>().Use<TokenReplacementGenerator>();
 			For<IStringGenerator>().Use<StringGenerator>();
 			For<INoneGenerator>().Use<NoneGenerator>();
+            For<IEnglishTownGenerator>().Use<EnglishTownGenerator>();
 
 			For<IGeneratorInfo>().Add<AccountNumberGeneratorInfo>();
 			For<IGeneratorInfo>().Add<AddressGeneratorInfo>();
@@ -60,6 +61,7 @@ namespace WaveTech.Dafuscator.Generators
 			For<IGeneratorInfo>().Add<GuidGeneratorInfo>();
 			For<IGeneratorInfo>().Add<TokenReplacementGeneratorInfo>();
 			For<IGeneratorInfo>().Add<NoneGeneratorInfo>();
+            For<IGeneratorInfo>().Add<EnglishTownGeneratorInfo>();
 
 			//For<IGeneratorInfo>()
 			//      .AddInstances(x =>
@@ -117,6 +119,7 @@ namespace WaveTech.Dafuscator.Generators
 			For<IGeneratorBuilder>().Add<GuidGeneratorBuilder>();
 			For<IGeneratorBuilder>().Add<TokenReplacementGeneratorBuilder>();
 			For<IGeneratorBuilder>().Add<NoneGeneratorBuilder>();
+            For<IGeneratorBuilder>().Add<EnglishTownGeneratorBuilder>();
 
 			//For<IGeneratorBuilder>()
 			//      .AddInstances(x =>

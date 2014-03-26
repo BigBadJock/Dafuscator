@@ -155,6 +155,7 @@
     <Compile Include="Interfaces\Generators\IAccountNumberGenerator.cs" />
     <Compile Include="Interfaces\Generators\IAddressGenerator.cs" />
     <Compile Include="Interfaces\Generators\ICharacterGenerator.cs" />
+    <Compile Include="Interfaces\Generators\IEnglishTownGenerator.cs" />
     <Compile Include="Interfaces\Generators\ICityGenerator.cs" />
     <Compile Include="Interfaces\Generators\IClearGenerator.cs" />
     <Compile Include="Interfaces\Generators\ICompanyNameGenerator.cs" />

@@ -144,7 +144,14 @@ namespace WaveTech.Dafuscator.Services
 			sql.Append(string.Format("DECLARE @{0}RecId BIGINT \r\n", tableNameOnly));
 			sql.Append(string.Format("DECLARE @{0}RowNum BIGINT \r\n", tableNameOnly));
 
-			sql.Append(string.Format("SELECT TOP 1 @{0}RecId={1} FROM [{2}].[{3}] ORDER BY {1} ASC \r\n", tableNameOnly, primaryKey.Name, table.Schema, table.Name));
+            if (primaryKey != null)
+            {
+                sql.Append(string.Format("SELECT TOP 1 @{0}RecId={1} FROM [{2}].[{3}] ORDER BY {1} ASC \r\n", tableNameOnly, primaryKey.Name, table.Schema, table.Name));
+            }
+            else
+            {
+                sql.Append(string.Format("SELECT TOP 1 @{0}RecId={1} FROM [{1}].[{2}]  \r\n", tableNameOnly, table.Schema, table.Name));
+            }
 			sql.Append(string.Format("SET @{0}RowNum = 0 \r\n", tableNameOnly));
 			sql.Append(string.Format("WHILE @{0}RowNum < {1} \r\n", tableNameOnly, table.RecordCount));
 			sql.Append("BEGIN \r\n");
